@@ -1,0 +1,89 @@
+What is the difference between List, Set and Map?:
+  link: https://www.javaquery.com/2016/10/what-is-difference-between-list-set-and.html
+How to Initialize List in declaration?:
+  link: https://www.javaquery.com/2015/10/how-to-initialize-list-in-declaration.html
+  answer: List<Integer> listIntegers = new ArrayList<Integer>(Arrays.asList(10, 20, 30));
+How List.add() and List.addAll() works?:
+  link: https://www.javaquery.com/2014/11/how-listadd-and-listaddall-works.html
+How to sort a List in Java?:
+  link: https://www.javaquery.com/2014/11/how-to-sort-list-in-java.html
+  answer: Collections.sort(listInteger);
+How to sort List of Bean in Java?:
+  link: https://www.javaquery.com/2014/12/how-to-sort-list-of-bean-in-java.html
+  answer: >-
+    - by implementing Comparable for class. (i.e Collections.sort(listUser);)
+    - by implementing object of Comparator. (i.e Collections.sort(listUser, objComparator);)
+How to remove all elements from List except specific?:
+  link: https://www.javaquery.com/2014/11/how-to-remove-all-elements-from-list.html
+  answer: Use retainAll(Collection<?> c).
+How to convert List of data to Set of data and vice versa in Java?:
+  link: https://www.javaquery.com/2016/10/how-to-convert-list-of-data-to-set-of.html
+  answer: >-
+    - List<String> list = new ArrayList(setOfStrings);
+    - Set<String> set = new HashSet(listOfStrings);
+How to reverse List?:
+  link: https://www.javaquery.com/2014/12/how-to-reverse-list-in-java-collection.html
+  answer: Collections.reverse(listString);
+How to get unique values from List of String?:
+  link: https://www.javaquery.com/2015/02/how-to-get-unique-values-from-list-of.html
+  answer: Create HashSet from List it will give you unique value.
+How to check is there any common element between two List of String?:
+  link: https://www.javaquery.com/2014/12/how-to-check-is-there-any-common.html
+  answer: Collections.disjoint(Collection<?> c1, Collection<?> c2) - Returns true if the two specified collections have no elements in common.
+How to Initialize Set in declaration?:
+  link: https://www.javaquery.com/2015/10/how-to-initialize-set-in-declaration.html
+  answer: Set<Integer> setIntegers = new HashSet<Integer>(Arrays.asList(10, 20, 30));
+Fail Fast vs Fail Safe Iterator in Java:
+  link: https://www.javaquery.com/2016/08/fail-fast-vs-fail-safe-iterator-in-java.html
+  answer: >-
+    - Fail Fast: When you perform add, update or remove on collection while iterating on it. It throws java.util.ConcurrentModificationException.
+    - Fail Safe: It iterate over the clone(copy) of original collection. So It won't throw java.util.ConcurrentModificationException.
+How Fail Fast Iterator identifies that the collection is modified?:
+  link: https://www.javaquery.com/2016/08/how-fail-fast-iterator-identifies-that.html
+Why Map interface does not extends Collection interface?:
+  answer: Map is (key, value) pair not a collection of one type of values so it does not extends Collection interface. Collection interface accept single object via add(E e) but Map interface requires key, value pair in method put(K key, V value).
+Does Map accept `null` as key?:
+  answer: HashMap and LinkedHashMap accepts null key but TreeMap will throws NullPointerException. HashMap stores null key at 0th index in bucket.
+Does Map accept `null` values?:
+  answer: You can have n null values.
+What is the initial capacity of HashMap?:
+  answer: 16
+What is the maximum capacity of HashMap?:
+  answer: 1073741824
+Does HashMap maintain insertion order?:
+  answer: No.
+Is HashMap synchronized? or Is HashMap thread-safe?:
+  answer: No.
+How to synchronize Map?:
+  answer: Using Collections.synchronizedMap(map), best practice Map m = Collections.synchronizedMap(new HashMap(...));
+How to avoid concurrent modification exception?:
+  answer: Synchronize Map using Map m = Collections.synchronizedMap(new HashMap(...)); or Map n = new ConcurrentHashMap();
+How HashMap works internally in Java?:
+  link: https://www.javaquery.com/2019/11/how-hashmap-works-internally-in-java.html
+How LinkedHashMap works internally in Java?:
+  link: https://www.javaquery.com/2019/12/how-linkedhashmap-works-internally-in.html
+How HashMap stores data in bucket (array/table)?:
+  answer: Its important to remember that HashMap stores not just hash code of key in Array. It stores hash code, key, value and `next` as Entry object in Array.
+What is Hash code/key collision?:
+  answer: >-
+    When two same or different hash code of key generates same index of bucket location by performing bitwise AND is called hash code/key collision. In this situation HashMap forms linked list at given bucket location (index).
+
+    For example "AaAaAa".hashCode() and "AaAaBB".hashCode() generates same hash code.
+How HashMap handles Hash code/key collision? or What will happend if two objects have same hash code?:
+  answer: It forms linked list at bucket location.
+How HashMap will retrieve value when two keys have same hash code?:
+  answer: Linked list formed at bucket location when two keys have same hash code so it'll traverse through all linked list node until it find the correct key and equals method of key returns true.
+Where does HashMap stores null key?:
+  answer: null key will be stored at 0th index of bucket.
+Why String, Integer and other wrapper classes are good choice for HashMap key?:
+  answer: String, Integer and other wrapper classes are immutable so its best choice to use it as key.
+Can we use mutable key in HashMap?:
+  answer: Yes, You can use mutable key but its not good choice because it'll fail to retrieve correct value in get(key).
+Can we use our own custom object as key in HashMap?:
+  answer: Yes, You can use your custom object as key in HashMap but its necessary to consider immutability of that object and also implementing hashCode() and equals() method in your class.
+Can we store duplicate key in HashMap?:
+  answer: No.
+Can we store duplicate value in HashMap?:
+  answer: Yes.
+Popular Map interview questions in Java:
+  link: https://www.javaquery.com/2019/11/popular-map-interview-questions-in-java.html
