@@ -1,0 +1,32 @@
+What is String pool in Java?:
+  answer: Its the special area in Java heap to store the String literals like "javaQuery".
+Why String is immutable? or Why String class marked as "final"?:
+  link: https://www.javaquery.com/2014/12/why-string-is-immutable-in-java.html
+  answer: String objects are cached in String Pool and shared between multiple thread so it will lead to risk of value changed by one thread will affect value of other thread.
+What is the difference between replace and replaceAll?:
+  link: https://www.javaquery.com/2015/02/what-is-difference-between-replace-and.html
+  answer: >-
+    - replace: It will replace all occurrence of CharacterString matched in String. "replace" can not process Regular Expression.
+    - replaceAll: It will replace all occurrence of CharacterString matched in String. "replaceAll" can process Regular Expression.
+What is the difference between String.valueOf() and toString()?:
+  link: https://www.javaquery.com/2015/06/what-is-difference-between.html
+  answer: >-
+    String.valueOf() is null safe.
+    toString() can cause the java.lang.NullPointerException.
+What is the difference between str.equals("Vicky") and "Vicky".equals(str)?:
+  link: https://www.javaquery.com/2014/10/what-is-difference-between.html
+  answer: >-
+    str.equals("Vicky") can produce java.lang.NullPointerException
+    "Vicky".equals(str) is null safe.
+String vs StringBuilder vs StringBuffer:
+  answer: >-
+    - String: When we have String that keeps changing then we have to use StringBuilder or StringBuffer and String is immutable.
+    - StringBuilder: Its fast compare to String and StringBuffer. However its not thread safe. StringBuilder is mutable.
+    - StringBuffer: Its slow compare to StringBuilder as its thread safe. StringBuffer is mutable.
+How to reverse the String in Java? or How to check String is Palindrome or not?:
+  link: https://www.javaquery.com/2015/02/how-to-check-string-is-palindrome-or.html
+  answer: We can use StringBuilder.reverse() or StringBuffer.reverse() to reverse the String.
+How to move String object from Heap to String Pool?:
+  answer: String.intern() is used to move String object from Heap to String Pool.
+Does String is thread-safe in Java?:
+  answer: Yes it it. String is immutable and we can't change value of String so it can be used in multi-threaded environment.

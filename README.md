@@ -1,2 +1,1 @@
-# interview-notes-java
-Java interview notes
+# Java Interview Questions and Notes

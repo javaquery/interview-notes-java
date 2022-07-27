@@ -1,0 +1,37 @@
+What is the difference between interface and abstract class?:
+  link: https://www.javaquery.com/2015/02/difference-between-abstract-class-and.html
+What is abstract class?:
+  answer: An abstract class is a class that is incomplete, or to be considered incomplete.
+Can we instantiate abstract class?:
+  answer: No. We can not instantiate abstract class. Its restricted by Java.
+Why does abstract class have constructor if we can not instantiate?:
+  answer: Constructor in abstract class used to initialize properties/fields of abstract class via not abstract sub-class.
+When constructor of abstract class called?:
+  answer: When sub-class instantiated, constructor of abstract class is called.
+Can we mark constructor as abstract?:
+  answer: No.
+Is it compulsory for abstract class to have at least one abstract method?:
+  answer: No its not compulsory. You can create abstract class with or without abstract methods.
+Can we declare abstract method as private?:
+  answer: No. If abstract method is private then its not visible/accessible in its sub-class so it can not provide its implementation. However you can make abstract method protected.
+Why final and abstract can not be used at a time?:
+  answer: Simply it contradicts with each other. When class or method marked with final means value or implementation provided and you don't want it to be changed while abstract means implementation asked to provide.
+Can we declare abstract class or method as static?:
+  answer: Simply it contradicts with each other. No. static can be called without creating object and it contains implementation or value. abstract means implementation asked to provide. Its same as final.
+Can we declare inner class as abstract?:
+  answer: Yes
+Can abstract method include throws in its declaration?:
+  answer: Yes
+Can we mark abstract method as synchronized?:
+  answer: No. However sub-class which override the method can be synchronized.
+Can we use abstract class as member of another abstract class?:
+  answer: Yes. Its same as declaring other class as member(variable).
+What is Abstract class in Java and popular interview questions?:
+  link: https://www.javaquery.com/2019/11/what-is-abstract-class-in-java-and.html
+Functional Interface in Java 8:
+  link: https://www.javaquery.com/2015/06/functional-interface-in-java-8.html
+  answer: Any Interface annotated with @FunctionalInterface, instructs compiler to check that, this Interface should have only one abstract method declared in it.
+default and static method in Java Interface:
+  link: https://www.javaquery.com/2015/06/default-and-static-method-in-java.html
+What happens when Two interfaces with same default method name:
+  link: https://www.javaquery.com/2015/06/default-and-static-method-in-java.html
