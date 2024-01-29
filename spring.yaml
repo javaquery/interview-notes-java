@@ -1,0 +1,52 @@
+What is IoC (Inversion Of Control)?:
+  links:
+    - https://martinfowler.com/bliki/InversionOfControl.html
+    - https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring
+  answer: Inversion of Control is a principle in software engineering which transfers the control of objects or portions of a program to a container or framework.
+What Is Dependency Injection?:
+  links:
+    - https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring#what-is-dependency-injection
+  answer: >-
+    Dependency injection is a pattern we can use to implement IoC, where the control being inverted is setting an object's dependencies.
+    Connecting objects with other objects, or “injecting” objects into other objects, is done by an assembler rather than by the objects themselves.
+    - Constructor-Based Dependency Injection
+    - Setter-Based Dependency Injectiona
+    - Field-Based Dependency Injection
+The Spring IoC Container:
+  links:
+    - https://www.baeldung.com/inversion-control-and-dependency-injection-in-spring#the-spring-ioc-container
+What is a Spring Bean?:
+  links:
+    - https://www.digitalocean.com/community/tutorials/spring-interview-questions-and-answers
+  answer: Any normal java class that is initialized by the Spring IoC container is called Spring Bean. We use Spring ApplicationContext to get the Spring Bean instance.
+What are the different scopes of Spring Bean?:
+  links:
+    - https://www.digitalocean.com/community/tutorials/spring-interview-questions-and-answers
+  answer: >-
+    - singleton: Only one instance of the bean will be created for each container.
+    - prototype: A new instance will be created every time the bean is requested.
+    - request: This is the same as the prototype scope, however, it’s meant to be used for web applications. A new instance of the bean will be created for each HTTP request.
+    - session: A new bean will be created for each HTTP session by the container.
+    - global-session: This is used to create global session beans for Portlet applications.
+What is the Spring Bean’s life cycle?:
+  links:
+    - https://www.digitalocean.com/community/tutorials/spring-interview-questions-and-answers
+What is Bean wiring and @Autowired annotation?:
+  links:
+    - https://www.digitalocean.com/community/tutorials/spring-interview-questions-and-answers
+  answer: >-
+    The process of injection spring bean dependencies while initializing is called Spring Bean Wiring.
+    We can use @Autowired annotation with fields or methods for autowiring byType.
+What are different types of Spring Bean autowiring?:
+  links:
+    - https://www.digitalocean.com/community/tutorials/spring-interview-questions-and-answers
+  answer: >-
+    - autowire byName
+    - autowire byType
+    - autowire by constructor
+    - autowiring by @Autowired and @Qualifier annotations
+Does Spring Bean provide thread safety?:
+  answer: >-
+    The default scope of Spring bean is singleton, so there will be only one instance per context. That means that all the having a class level variable that any thread can update will lead to inconsistent data. Hence in default mode spring beans are not thread-safe.
+    However, we can change spring bean scope to request, prototype or session to achieve thread-safety at the cost of performance. It’s a design decision and based on the project requirements.
+
